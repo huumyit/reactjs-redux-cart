@@ -8,7 +8,6 @@ class CartResult extends Component {
       for (var i = 0; i < cart.length; i++) {
         total += cart[i].product.price * cart[i].quantity;
       }
-
       return total;
     }
   }

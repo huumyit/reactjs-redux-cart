@@ -15,7 +15,7 @@ var initialState = [
 		description: 'Sản phẩm do apple sản xuất',
 		price: 300,
 		inventory: 5,
-		rating: 3
+		rating: 4
 	},
 	{
 		id: 3,

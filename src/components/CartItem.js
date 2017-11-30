@@ -6,6 +6,11 @@ class CartItem extends Component {
     return price * quantity;
   }
 
+  onDelete = (product) => {
+    var {onDeleteProductInCart} = this.props;
+    onDeleteProductInCart(product);
+  }
+
   render() {
     var {item} = this.props;
     return (
@@ -41,7 +46,8 @@ class CartItem extends Component {
             className="btn btn-sm btn-primary waves-effect waves-light"
             data-toggle="tooltip"
             data-placement="top"
-            data-original-title="Remove item">
+            data-original-title="Remove item"
+            onClick={() => this.onDelete(item.product)}>
             X
           </button>
         </td>

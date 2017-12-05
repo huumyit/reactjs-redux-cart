@@ -3,13 +3,6 @@ import * as Message from './../constants/Message';
 
 class CartItem extends Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      quantity: 1
-    }
-  }
-
   showSubTotal = (price, quantity) => {
     return price * quantity;
   }
@@ -33,9 +26,7 @@ class CartItem extends Component {
 
   render() {
     var {item} = this.props;
-    var {quantity} = item.quantity > 0
-      ? item
-      : this.state;
+    var {quantity} = item;
     return (
       <tr>
         <th scope="row">
